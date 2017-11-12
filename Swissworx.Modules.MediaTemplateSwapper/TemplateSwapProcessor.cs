@@ -75,7 +75,7 @@ namespace Swissworx.Modules.MediaTemplateSwapper
                     foreach (Item item in args.UploadedItems)
                     {
                         // Check whether the processor has a swap config that matches the source template id
-                        SwapperConfiguration swapConfiguration = this.SwapConfigurations.FirstOrDefault(config => config.SourceTemplateId == item.Template.ID);
+                        SwapperConfiguration swapConfiguration = this.SwapConfigurations.FirstOrDefault(config => new ID(config.SourceTemplateId) == item.Template.ID);
                         if (swapConfiguration != null)
                         {
                             TemplateItem targetTemplate = this.database.Templates[swapConfiguration.TargetTemplateId];

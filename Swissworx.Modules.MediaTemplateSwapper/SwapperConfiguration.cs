@@ -9,18 +9,16 @@
 
 namespace Swissworx.Modules.MediaTemplateSwapper
 {
-    using Sitecore.Data;
-
     /// <summary>The media template swapper configuration.</summary>
     public class SwapperConfiguration
     {
         #region Public Properties
 
         /// <summary>Gets or sets the source template id.</summary>
-        public ID SourceTemplateId { get; set; }
+        public string SourceTemplateId { get; set; }
 
         /// <summary>Gets or sets the target template id.</summary>
-        public ID TargetTemplateId { get; set; }
+        public string TargetTemplateId { get; set; }
 
         #endregion
     }
